@@ -3,14 +3,14 @@
 import logging
 
 from icebergsdk.resources.application import Application, ApplicationCommissionSettings, ApplicationMerchantPolicies,\
-                                             ApplicationTransaction, ApplicationPaymentSettings, ApplicationUrls, ApplicationPermission
+    ApplicationTransaction, ApplicationPaymentSettings, ApplicationUrls, ApplicationPermission
 from icebergsdk.resources.order import Order, MerchantOrder, OrderItem
 from icebergsdk.resources.cart import Cart, CartItem
 from icebergsdk.resources.product import Product, ProductOffer, ProductVariation, ProductOfferImage, Category, Brand,\
-                                            ProductFamily, ProductFamilySelector
+    ProductFamily, ProductFamilySelector, Image
 from icebergsdk.resources.store import Store, MerchantImage, MerchantAddress, StoreBankAccount,\
-                                       MerchantCommissionSettings, MerchantFeed, MerchantShippingPolicy,\
-                                       MerchantTransaction, Permission
+    MerchantCommissionSettings, MerchantFeed, MerchantShippingPolicy,\
+    MerchantTransaction, Permission
 from icebergsdk.resources.user import User, Profile, UserShoppingPreference
 from icebergsdk.resources.address import Address, Country
 from icebergsdk.resources.payment import Payment
@@ -27,6 +27,7 @@ from icebergsdk.resources.options import Option, OptionAnswer
 
 
 logger = logging.getLogger('icebergsdk')
+
 
 def get_class_from_resource_uri(resource_uri):
     types = {
@@ -50,6 +51,7 @@ def get_class_from_resource_uri(resource_uri):
         "profile": Profile,
         "user_shopping_prefs": UserShoppingPreference,
         "payment": Payment,
+        "image": Image,
         "merchant": Store,
         "store_bank_account": StoreBankAccount,
         "commission_settings": MerchantCommissionSettings,

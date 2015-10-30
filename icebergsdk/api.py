@@ -79,6 +79,7 @@ class IcebergAPI(IcebergRequestBase):
             resources.OptionAnswer,
             resources.AvailabilityCalendar,
             resources.AvailabilityTimeSlot,
+            resources.Reservation,
         ]
 
         for resource_class in resource_classes_list:
